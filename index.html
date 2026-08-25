@@ -15,7 +15,6 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; }
-
   /* HEADER */
   header {
     background: #0D1B2A;
@@ -58,13 +57,11 @@
   .header-search input::placeholder { color: rgba(255,255,255,0.3); }
   .header-search input:focus { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.2); }
   .header-search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); opacity: .35; pointer-events: none; }
-
 /* STATS */
 .statsbar {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   padding: 18px 52px;
-
   display: flex;
   justify-content: center; /* 👈 centra TODO */
   align-items: center;
@@ -72,48 +69,39 @@
   flex-wrap: wrap;
   position: relative;
 }
-
 .stat {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
 .stat strong {
   font-size: 26px;
   font-weight: 700;
 }
-
 .stat span {
   font-size: 12px;
   color: var(--muted);
 }
-
 /* BUSCADOR */
 .header-search-light {
   max-width: 300px; /* 👈 sin margin-left */
   width: 100%;
   flex-shrink: 0;
 }
-
 .header-search-light input {
   background: #fff;
   color: var(--ink);
   border: 1px solid var(--border);
 }
-
 .header-search-light input::placeholder {
   color: var(--muted);
 }
-
 .header-search-light svg {
   stroke: var(--muted);
 }
-
   /* MAIN */
   main { padding: 32px 52px 72px; max-width: 1200px; margin: 0 auto; }
-
   /* AREA BLOCK */
   .area-block {
     margin-bottom: 20px; border-radius: 14px; overflow: hidden;
@@ -122,7 +110,6 @@
     animation: fadeUp .4s ease forwards;
   }
   @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-
   .area-header {
     display: flex; align-items: center; gap: 12px;
     padding: 14px 24px; cursor: pointer; user-select: none;
@@ -135,21 +122,18 @@
   }
   .area-chev { transition: transform .25s; opacity: .7; flex-shrink: 0; }
   .area-block.collapsed .area-chev { transform: rotate(-90deg); }
-
   /* TABLE */
-  .table-wrap { 
-  background: var(--surface); 
+  .table-wrap {
+  background: var(--surface);
   overflow-x: auto;
   max-height: 3000px; /* necesario para animación */
-  transition: max-height .4s ease; 
+  transition: max-height .4s ease;
   -webkit-overflow-scrolling: touch;
   }
-
-  .area-block.collapsed .table-wrap { 
-  max-height: 0; 
-  overflow: hidden; 
+  .area-block.collapsed .table-wrap {
+  max-height: 0;
+  overflow: hidden;
   }
-
   table { width: 100%; min-width: 700px; border-collapse: collapse; font-size: 13px; }
   thead th {
     padding: 9px 18px; text-align: left; font-size: 10px; font-weight: 600;
@@ -159,17 +143,14 @@
   thead th:first-child { width: 44px; text-align: center; }
   thead th:nth-child(3) { width: 200px; }
   thead th:last-child { width: 180px; }
-
   tbody tr { border-bottom: 1px solid var(--border); transition: background .15s; }
   tbody tr:last-child { border-bottom: none; }
   tbody tr:hover { background: #F8FAFC; }
   tbody td { padding: 12px 18px; vertical-align: middle; }
   tbody td:first-child { text-align: center; font-size: 11px; color: var(--muted); font-weight: 500; }
-
   .td-info { display: flex; flex-direction: column; gap: 4px; }
   .td-name { font-weight: 500; color: var(--ink); line-height: 1.3; font-size: 13px; }
   .td-obj { font-size: 11px; color: var(--muted); line-height: 1.45; font-style: italic; }
-
   /* RESPONSABLE */
   .td-resp { display: flex; align-items: center; gap: 10px; }
   .resp-photo {
@@ -183,7 +164,6 @@
   }
   .resp-name { font-size: 12px; color: var(--ink); font-weight: 400; line-height: 1.3; }
   .resp-role { font-size: 10px; color: var(--muted); }
-
   /* PILLS */
   .td-links { display: flex; gap: 6px; flex-wrap: wrap; }
   .pill {
@@ -195,7 +175,6 @@
   }
   .pill:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,0.12); }
   .pill svg { flex-shrink: 0; }
-
   /* NO RESULTS */
   #no-results { display: none; text-align: center; padding: 72px 24px; color: var(--muted); font-size: 14px; }
   .center-hint {
@@ -207,15 +186,12 @@
     margin-bottom: 14px;
     letter-spacing: 0.3px;
   }
-
   /* FOOTER */
   footer { text-align: center; padding: 28px; font-size: 11px; color: var(--muted); border-top: 1px solid var(--border); }
-
 @media (max-width: 700px) {
   header, .statsbar, main { padding-left: 20px; padding-right: 20px; }
   .td-links { flex-direction: column; }
   thead th:nth-child(3), tbody td:nth-child(3) { display: none; }
-
   .logo-header {
     position: static !important;
     top: auto !important;
@@ -226,18 +202,15 @@
     margin-left: auto;
     margin-right: auto;
   }
-
   .header-inner {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
   header h1 {
     white-space: normal;
   }
 }
-
 /* TOOLTIP IMAGEN */
 .tooltip-img {
   position: fixed;
@@ -249,7 +222,6 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   pointer-events: none;
 }
-
 .tooltip-img img {
   width: 650px;
   max-width: 80vw; /* evita que se salga de la pantalla */
@@ -257,13 +229,11 @@
   border-radius: 12px;
   display: block;
 }
-
 .main-wrapper {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .statsbar {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -273,7 +243,6 @@
   flex-wrap: wrap;
   align-items: center;
 }
-
 .logo-header {
   position: absolute;
   top: -60px;
@@ -282,11 +251,9 @@
   width: auto;
   opacity: 0.95;
 }
-
 </style>
 </head>
 <body>
-
 <header>
   <div class="header-inner">
     <div class="header-left">
@@ -294,16 +261,11 @@
       <h1>Directorio de Tableros Corporativos</h1>
       <p>Accede a todos los tableros y archivos de la organización desde un solo lugar</p>
       <p>Podrás ver la información del tablero si cuentas con los permisos otorgados</p>
-
     </div>
-
     <img src="https://i.imgur.com/0JIDNut.png" class="logo-header">
   </div>
 </header>
-
-
 <div class="statsbar">
-
   <!-- ÁREAS (CON TOOLTIP) -->
   <div class="stat"
        onmouseenter="showImgTooltip(event, 'https://i.imgur.com/TyIaikZ.png')"
@@ -312,13 +274,11 @@
     <strong id="stat-areas"></strong>
     <span>Áreas</span>
   </div>
-
   <!-- TABLEROS (SIN TOOLTIP) -->
   <div class="stat">
     <strong id="stat-tableros"></strong>
     <span>Tableros</span>
   </div>
-
 <div class="header-search header-search-light">
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2.5">
     <circle cx="11" cy="11" r="8"/>
@@ -326,32 +286,32 @@
   </svg>
   <input type="text" id="searchInput" placeholder="Buscar tablero, área u objetivo…">
 </div>
-
 </div>
 
 <p class="header-hint center-hint">
   👆 Pasa el cursor sobre la tarjeta de Áreas para una vista general y sobre los números de la matriz para previsualizar los tableros
 </p>
-
 <div class="main-wrapper">
   <main id="main"></main>
 </div>
-
 <div id="no-results">No se encontraron resultados para "<span id="search-term"></span>"</div>
-
 <footer>Florasíntesis · Directorio de Tableros Corporativos · Para actualizar enlaces o responsables contacta al equipo de BI</footer>
-
 <div id="imgTooltip" class="tooltip-img"></div>
-
 <script>
 const AREAS = [
+  {
+    name: "Tracción Empresarial", color: "#0D1B2A", light: "#EEF1F6",
+    tableros: [
+      { name: "Tracción Empresarial", obj: "Brindar una visión integral del desempeño organizacional mediante los principales indicadores comerciales, operativos y financieros", tabUrl: "https://app.powerbi.com/links/Yw4zIqbsJy?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", img: "https://imgur.com/7ThWpUJ", resp: { nombre: "Ignacio Sosa", rol: "Dirección General", foto: "https://imgur.com/LvxeJNZ"} },
+    ]
+  },
   {
     name: "Comercial", color: "#1E3A5F", light: "#EBF2FB",
     tableros: [
       { name: "Sales Scorecard", obj: "Establecer alertas a partir de la información disponible y desarrollar un plan de acción", tabUrl: "https://app.powerbi.com/links/mkPzriALAb?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", img: "https://imgur.com/CX293gL.png" , resp: { nombre: "Geovanny Arteaga", rol: "Área Comercial", foto: "https://i.imgur.com/2p84atZ.png" } },
       { name: "Comercial Móvil", obj: "Monitorear el desempeño comercial de cada ejecutivo", tabUrl: "https://app.powerbi.com/links/bN6hfrn0ZF?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare" , img: "https://imgur.com/Xtg5dTC.png"  ,resp: { nombre: "Ejecutivos", rol: "Área Comercial", foto: "https://i.imgur.com/dJNByTh.png" } },
       { name: "Monitoreo de Clientes", obj: "Analizar el comportamiento de compra de cada cliente para fortalecer la relación comercial", tabUrl: "https://app.powerbi.com/links/qzX8bizEOL?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", xlUrl: "https://marcsealcom-my.sharepoint.com/:x:/g/personal/cangueta_florasintesis_com_ec/IQBEYJl7FTadS7Kju0Gp25-3AQDyzo0g3Z-CsyTQNlImyIg?e=WmaVw5", img: "https://i.imgur.com/RLHljz9.png", resp: { nombre: "Supervisores", rol: "Área Comercial", foto: "https://i.imgur.com/S3waot8.png" } },
-      { name: "Clientes Nuevos, Actuales y Pareto", obj: " Analizar la captación, evolución y concentración de clientes para evaluar el crecimiento comercial", tabUrl: "https://app.powerbi.com/links/iq0yUrcsmD?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", img: "https://i.imgur.com/x5wzYIU.png", resp: { nombre: "Geovanny Arteaga", rol: "Área Comercial", foto: "https://i.imgur.com/2p84atZ.png" } },
+      { name: "Clientes Nuevos, Actuales y Pareto", obj: " Analizar la captación, evolución y concentración de clientes para evaluar el crecimiento comercial", tabUrl: "https://app.powerbi.com/links/iq0yUrcsmD?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", img: "https://i.imgur.com/x5wzYIU.png", resp: { nombre: "Geovanny Arteaga", rol: "Área Comercial", foto: "https://i.imgur.com/2p84atZ.png" } },
       { name: "Asignación de Pedidos", obj: "Priorizar pedidos según su criticidad e impacto para optimizar la atención y el cumplimiento oportuno", tabUrl: "https://app.powerbi.com/links/vk30zVaQ3g?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", xlUrl: "https://marcsealcom-my.sharepoint.com/:f:/g/personal/cangueta_florasintesis_com_ec/IgAyN-F9hhCAR4k9tAoDoWnVARMMDk6ui6t1R0ZFnapj5GM?e=0xTrcj",img: "https://i.imgur.com/FsL34ss.png" ,  resp: { nombre: "Geovanny Arteaga", rol: "Área Comercial", foto: "https://i.imgur.com/2p84atZ.png" } },
       { name: "Tasa de Goteo y Abandono Cliente Recurso", obj: "Detectar oportunamente clientes inactivos o perdidos para activar acciones de recuperación", tabUrl: "https://app.powerbi.com/links/uFiCGCVxWt?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", xlUrl: "https://marcsealcom-my.sharepoint.com/:x:/g/personal/cangueta_florasintesis_com_ec/IQAj3fnf0lgcSqaf3dhPiipTAS4vdgyUym09M8gr0r5KAFc?e=mavocd", img: "https://i.imgur.com/DDj5vSq.png",  resp: { nombre: "Geovanny Arteaga", rol: "Área Comercial", foto: "https://i.imgur.com/2p84atZ.png" } },
       { name: "Radar de Seguimiento Comercial", obj: "Seguimiento a la recuperación y reactivación de clientes", tabUrl: "https://app.powerbi.com/links/Ex2WR3m13y?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", img:"https://i.imgur.com/jbowGWB.png" , resp: { nombre: "Geovanny Arteaga", rol: "Área Comercial", foto: "https://i.imgur.com/2p84atZ.png" } },
@@ -408,7 +368,6 @@ const AREAS = [
       { name: "Encuesta de Satisfacción al Cliente", obj: "Visualizar los resultados de la encuesta de satisfacción del cliente para identificar tendencias clave en la percepción, necesidades y expectativas de los clientes", tabUrl: "https://app.powerbi.com/links/lqym2bPZVx?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", img: "https://i.imgur.com/B9zB8Ws.png",  resp:{ nombre: "Fabricio García", rol: "Área Postventa", foto: "https://i.imgur.com/Tzk31Mu.png" }},
       { name: "Quejas y Reclamos Florasíntesis", obj: "Monitorear las quejas y reclamos para asegurar el cumplimiento de los estándares de calidad", tabUrl: "https://app.powerbi.com/links/l6LIT5qJ6w?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", img: "https://i.imgur.com/LBT9OsK.png",  resp: { nombre: "Fabricio García", rol: "Área Postventa", foto: "https://i.imgur.com/Tzk31Mu.png" } },
       { name: "Quejas y Reclamos Envaprom", obj: "Monitorear las quejas y reclamos para asegurar el cumplimiento de los estándares de calidad", tabUrl: "https://app.powerbi.com/links/5SW5HD0vFU?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", img: "https://i.imgur.com/QU6JhmM.png",  resp: { nombre: "Fabricio García", rol: "Área Postventa", foto: "https://i.imgur.com/Tzk31Mu.png" } },
-
   ]},
   { name: "Marketing", color: "#5C4A1A", light: "#F4F0E6", tableros: [
       { name: "Colecciones, Eventos y Campañas", obj: "Analizar el efecto de colecciones, eventos y campañas en el comportamiento de compra", tabUrl: "https://app.powerbi.com/links/ABvACZgiRr?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", xlUrl: "https://marcsealcom-my.sharepoint.com/:x:/g/personal/cangueta_florasintesis_com_ec/IQDL5a9tsT29SIc21ZQ-tOXEAeoEkvGtzlyKpYGHHjvJKRw?e=cgSaXL", img:"https://i.imgur.com/7qKuvUB.png" ,  resp: { nombre: "Natalia Téllez", rol: "Área Marketing", foto: "https://i.imgur.com/TldYGt9.png" }},
@@ -420,51 +379,41 @@ const AREAS = [
       { name: "Muestras", obj: "Medir la efectividad de las muestras enviadas y su impacto en las ventas", tabUrl: "https://app.powerbi.com/links/Dq-I4yJ7IS?ctid=17fe0554-a852-4a68-a8f9-8335eddc2ebe&pbi_source=linkShare", img: "https://i.imgur.com/MrrVEj6.png",  resp: { nombre: "Anthony Lasluisa", rol: "Área Muestras", foto: "https://i.imgur.com/6xNoDlJ.png" } },
   ]},
 ];
-
 // Stats
 const totalTableros = AREAS.reduce((s, a) => s + a.tableros.length, 0);
 document.getElementById('stat-tableros').textContent = totalTableros;
-
 const totalAreas = AREAS.length;
 document.getElementById('stat-areas').textContent = totalAreas;
-
 function iconTab() {
   return `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>`;
 }
 function iconXl() {
   return `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>`;
 }
-
 function buildAvatar(resp, color) {
   if (resp.foto) {
     const fallback = resp.iniciales || resp.nombre.split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
-
     return `
       <img class="resp-photo" src="${resp.foto}" alt="${resp.nombre}"
         onerror="this.outerHTML='<div class=\\'resp-initials\\' style=\\'background:${color}22;color:${color}\\'>${fallback}</div>'" />
     `;
   }
-
   return `<div class="resp-initials" style="background:${color}22; color:${color};">${resp.iniciales}</div>`;
 }
-
 function renderAreas(filter = '') {
   const main = document.getElementById('main');
   main.innerHTML = '';
   const q = filter.toLowerCase().trim();
   let visibleCount = 0;
-
   AREAS.forEach((area, ai) => {
     const matched = area.tableros.filter(t =>
       !q || t.name.toLowerCase().includes(q) || area.name.toLowerCase().includes(q) || t.obj.toLowerCase().includes(q)
     );
     if (!matched.length) return;
     visibleCount += matched.length;
-
     const block = document.createElement('div');
     block.className = 'area-block';
     block.style.animationDelay = `${ai * 0.04}s`;
-
     const rows = matched.map((t) => {
       const idx = area.tableros.indexOf(t) + 1;
       const rowBg = (idx % 2 === 0) ? '#fff' : area.light;
@@ -472,7 +421,7 @@ function renderAreas(filter = '') {
         ? `<div class="td-resp">${buildAvatar(t.resp, area.color)}<div><div class="resp-name">${t.resp.nombre}</div><div class="resp-role">${t.resp.rol}</div></div></div>`
         : '<span style="color:#ccc;font-size:12px;">—</span>';
       return `<tr style="background:${rowBg}">
-        <td 
+        <td
         onmouseenter="showImgTooltip(event, '${t.img || ''}')"
         onmousemove="moveTooltip(event)"
         onmouseleave="hideImgTooltip()"
@@ -502,7 +451,6 @@ function renderAreas(filter = '') {
         </td>
       </tr>`;
     }).join('');
-
     block.innerHTML = `
       <div class="area-header" style="background:${area.color};" onclick="this.closest('.area-block').classList.toggle('collapsed')">
         <span class="area-dot"></span>
@@ -525,10 +473,8 @@ function renderAreas(filter = '') {
           <tbody>${rows}</tbody>
         </table>
       </div>`;
-
     main.appendChild(block);
   });
-
   const noRes = document.getElementById('no-results');
   if (visibleCount === 0) {
     noRes.style.display = 'block';
@@ -537,39 +483,29 @@ function renderAreas(filter = '') {
     noRes.style.display = 'none';
   }
 }
-
 function toggleArea(header) {
   header.closest('.area-block').classList.toggle('collapsed');
 }
-
 let debounce;
 document.getElementById('searchInput').addEventListener('input', e => {
   clearTimeout(debounce);
   debounce = setTimeout(() => renderAreas(e.target.value), 180);
 });
-
 renderAreas();
-
 const tooltip = document.getElementById("imgTooltip");
-
 function showImgTooltip(event, imgUrl) {
   if (!imgUrl) return;
-
   tooltip.innerHTML = `<img src="${imgUrl}" />`;
   tooltip.style.display = "block";
-
   moveTooltip(event);
 }
-
 function moveTooltip(event) {
   tooltip.style.left = (event.clientX + 15) + "px";
   tooltip.style.top = (event.clientY - 100 ) + "px";
 }
-
 function hideImgTooltip() {
   tooltip.style.display = "none";
 }
-
 </script>
 </body>
 </html>
